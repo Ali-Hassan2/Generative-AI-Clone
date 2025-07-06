@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--https://www.umso.com/ai-website-builder/?utm_source=dribbble&utm_campaign=drb_ai&utm_medium=shot&utm_content=ai-static-dark -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            font-family: "Inter", sans-serif;
+            background-color: #090b0e;
+
+        }
+
+
+        .navbar {
+            /* background-color: red; */
+            width: 100%;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            /* position: fixed; */
+        }
+
+
+        .navbar .logo {
+            width: 130px;
+            margin-left: 390px;
+
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 560px;
+            gap: 30px;
+            list-style: none;
+        }
+
+        ul li {
+            color: white;
+        }
+
+        ul #same:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .btn1 {
+            width: 60px;
+            height: 42px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            font-size: 15px;
+            color: white;
+            margin-left: -10px;
+            transition: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease;
+        }
+
+        .navbar .btn1:hover {
+
+            border: 2px solid rgb(92, 2, 112);
+
+        }
+
+        .navbar .btn2 {
+            width: 90px;
+            height: 42px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            font-size: 15px;
+            color: white;
+            margin-left: -10px;
+            transition: all;
+            transition-duration: 0.7s;
+            transition-timing-function: ease;
+        }
+
+        .navbar .btn2:hover {
+
+            border: 2px solid rgb(81, 1, 99);
+
+        }
+
+        /* Section 1 */
+        .container {
+            height: 700px;
+            width: 100%;
+            /* border: 1px solid green; */
+            margin-top: 20px;
+            position: relative;
+            top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .heading {
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: -325px;
+            width: 800px;
+        }
+
+        .heading h1 {
+
+            font-size: 66px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, rgb(59, 14, 242), rgb(136, 0, 209));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .simple {
+            /* border: 1px solid blue; */
+            position: relative;
+            top: 20px;
+        }
+
+        .simple span {
+            font-size: 1.4em;
+            color: rgba(255, 255, 255, 0.73);
+        }
+
+        .search {
+            height: 75px;
+            width: 630px;
+            background-image: linear-gradient(45deg, rgb(0, 183, 255), rgb(234, 4, 255));
+            position: relative;
+            top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow:
+                0 0 10px 5px rgba(135, 207, 235, 0.49),
+                0 0 20px 10px rgba(128, 0, 128, 0.518);
+            animation: shadowAnimation 1s infinite linear;
+        }
+
+        @keyframes shadowAnimation {
+            0% {
+                box-shadow:
+                    0 0 10px 5px rgba(135, 207, 235, 0.49),
+                    0 0 20px 10px rgba(128, 0, 128, 0.518);
+            }
+
+            50% {
+                box-shadow:
+                    0 0 10px 5px rgba(234, 4, 255, 0.49),
+                    0 0 20px 10px rgba(135, 207, 235, 0.518);
+            }
+
+            100% {
+                box-shadow:
+                    0 0 10px 5px rgba(135, 207, 235, 0.49),
+                    0 0 20px 10px rgba(128, 0, 128, 0.518);
+            }
+        }
+
+        .search2 {
+            width: 98.9%;
+            height: 92.5%;
+            background-color: #090b0e;
+            position: relative;
+            top: 0.4px;
+            left: -0.5px;
+            padding-right: 8px;
+            border-radius: 12px;
+            padding-left: 10px;
+        }
+
+        .search2 input {
+            width: 76%;
+            height: 100%;
+            background-color: transparent;
+            /* border: none; */
+            font-size: 19px;
+            font-weight: 300;
+            color: white;
+            padding-left: 10px;
+            /* border: none; */
+            border-radius: 15px;
+            outline: none;
+            border: none;
+        }
+
+        .search2 .bt {
+            width: 21%;
+            height: 67%;
+            align-items: center;
+            position: relative;
+            top: -2px;
+            background-color: #7b0fff;
+            font-size: 17px;
+            font-weight: 500;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding-left: 10px;
+            left: 10px;
+            transition: all 0.3s linear;
+        }
+
+        .search2 .bt:hover {
+            background-color: #340a67;
+        }
+
+        .search .bt i {
+            margin-left: 10px;
+        }
+
+        .exe {
+            /* border: 1px solid brown; */
+            position: relative;
+            top: 160px;
+            font-size: 16px;
+
+        }
+
+        .exe span {
+            color: rgba(255, 255, 255, 0.7);
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .exe i {
+            color: rgba(7, 236, 160, 0.603);
+        }
+
+        .exe .bt1 span {
+            color: black;
+            padding-left: 0px;
+        }
+
+        .exe .bt1 i {
+            padding-left: 0px;
+            color: rgba(0, 74, 123, 0.63);
+
+        }
+
+        .exe .bt1 {
+            height: 26px;
+        }
+
+        /* Section 2 */
+        .container2 {
+            height: 100%;
+            width: 100vw;
+            /* border: 1px solid red; */
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        .container h4 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #780aff;
+            position: relative;
+            /* left: 400px; */
+            /* top: -100px; */
+            top: 140px;
+            left: -280px;
+
+        }
+
+        .container2 h2 {
+            position: relative;
+            left: 407px;
+            width: 43%;
+            font-size: 2.5em;
+            color: white;
+        }
+
+        .secgrid {
+            margin-top: -60px;
+            width: 1100px;
+            height: 590px;
+            /* border: 1px solid blue; */
+            /* justify-content: center; */
+            position: relative;
+            left: 410px;
+            top: 100px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 40px;
+            row-gap: 40px;
+            /* background-color: white; */
+        }
+        @media (max-width:1200px) {
+            .secgrid{
+                grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 700px;
+            }
+
+            
+        }
+        @media (max-width:800px)
+        {
+            .secgrid{
+                grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            width: 290px;
+            }
+        }
+
+        .secgrid .box {
+            background-color: rgb(24, 24, 27);
+            /* border: 1px solid white; */
+            border-radius: 15px;
+            box-shadow: -1px 2px 10px black;
+            transition: all;
+            transition-duration: 0.2s;
+            transition-delay: 0s;
+            transition-timing-function: linear;
+
+        }
+
+        .secgrid .box:hover {
+            transform: scale(1.05);
+            box-shadow:
+                -1px 1px 10px rgba(135, 207, 235, 0.49), 1px -1px 20px rgba(128, 0, 128, 0.518);
+        }
+
+        .box i {
+            display: block;
+            font-size: 30px;
+            padding: 15px;
+            padding-left: 19px;
+            color: #6310c9;
+            padding-top: 20px;
+        }
+
+        .box span {
+            color: white;
+            padding: 15px;
+            padding-left: 17px;
+            font-size: 20px;
+        }
+
+        .box p {
+            color: rgba(255, 255, 255, 0.609);
+            padding: 15px;
+            padding-left: 17px;
+        }
+
+        .box button {
+            width: 90px;
+            height: 42px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            margin-left: 17px;
+            transform: all;
+            transition-duration: 0.7s;
+            transition-timing-function: ease;
+            margin-top: 30px;
+        }
+
+        .box button:hover {
+
+            border: 2px solid rgb(92, 2, 112);
+
+        }
+
+        .para {
+            /* border: 1px solid red; */
+            width: 800px;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            /* justify-items: center; */
+            position: relative;
+            top: 200px;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.686);
+
+        }
+
+        .para span {
+            font-weight: 600;
+        }
+
+        .para p {
+            display: inline;
+        }
+
+        .para #se {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            font-weight: 400;
+        }
+
+        /* Section 3 */
+        .container3 {
+            /* border: 1px solid red; */
+            height: 100vh;
+            width: 100vw;
+            margin-top: 100px;
+            /* border: 1px solid red; */
+        }
+
+        .container3 h4 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #780aff;
+            position: relative;
+            left: 400px;
+            top: 60px;
+            /* top: 140px; */
+            /* left: -280px; */
+        }
+
+        .container3 h2 {
+            position: relative;
+            left: 394px;
+            width: 43%;
+            font-size: 2.5em;
+
+            color: white;
+            top: 70px;
+        }
+
+        .container3 span {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.52);
+
+        }
+
+        .head {
+            display: flex;
+            /* align-items: center; */
+            /* border: 1px solid blue; */
+            width: 1200px;
+            height: 250px;
+            flex-direction: column;
+        }
+
+        .head span {
+            position: relative;
+            top: 85px;
+            left: 400px;
+        }
+
+        .pricebox1 {
+            width: 700px;
+            border: 1px solid rgba(122, 119, 119, 0.586);
+            height: 600px;
+            margin-left: 400px;
+            /* border: 25px; */
+            border-radius: 25px;
+        }
+
+        .pricebox2 {
+            width: 370px;
+            height: 450px;
+            border: 1px solid rgba(122, 119, 119, 0.516);
+            position: relative;
+            top: -520px;
+            left: 1100px;
+            border-left: none;
+            display: flex;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            flex-direction: column;
+
+        }
+
+        .pricebox1 h3 {
+            font-size: 28px;
+            margin-top: 30px;
+            margin-left: 30px;
+            color: white;
+        }
+
+        .pricebox1 div {
+            margin-top: 8px;
+            margin-left: 30px;
+            color: rgba(255, 255, 255, 0.541);
+        }
+
+        .pricebox1 .in {
+            position: relative;
+            top: 40px;
+            font-size: 37px;
+            font-weight: 800;
+            color: white;
+            margin-left: 30px;
+        }
+
+        .first {
+            width: 50%;
+            /* border: 1px solid green; */
+            height: 60%;
+            position: relative;
+            top: 30px;
+            left: -30px;
+        }
+
+        .first .item {
+            margin-top: 18px;
+
+        }
+
+        .first .item i {
+            color: #780aff;
+            padding-right: 10px;
+        }
+
+        .item span {
+            color: white
+        }
+
+        .second {
+            width: 50%;
+            /* border: 1px solid green; */
+            height: 60%;
+            position: relative;
+            top: -338px;
+            left: 316px;
+        }
+
+        .second .item {
+            margin-top: 18px;
+        }
+
+        .second .item i {
+            color: #780aff;
+            padding-right: 10px;
+        }
+
+        .pricebox1 .bts {
+            /* border: 1px solid green; */
+            position: relative;
+            top: -390px;
+            width: 100%;
+            height: 50px;
+            margin-left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .bts button {
+            width: 90%;
+            height: 100%;
+            background-color: #7b0fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            color: white;
+            font-weight: 500;
+            box-shadow: -3px 6px 10px black;
+            transition: all 0.3s ease;
+        }
+
+        .bts button i {
+            padding-left: 10px;
+        }
+
+        .bts button:hover {
+            transform: scale(1.02);
+            background-color: #592597;
+            /* box-shadow:  1px 10px rgba(135, 207, 235, 0.49), 1px -1px 20px rgba(128, 0, 128, 0.518); */
+        }
+
+        .pricebox2 h3 {
+            font-size: 29px;
+            color: white;
+            font-weight: 700;
+            margin-top: 10px;
+            padding-left: 13px;
+        }
+
+        .pricebox2 .basic {
+            font-size: 30px;
+            color: white;
+            font-weight: 500;
+            margin-top: 14px;
+            margin-left: 14px;
+        }
+
+        .pricebox2 .para1,
+        .last {
+            font-size: 15px;
+            margin-left: 14px;
+            margin-top: 3px;
+        }
+
+        .pricebox2 .free {
+            font-size: 40px;
+            color: white;
+            font-weight: 900;
+            margin-left: 14px;
+            margin-top: 26px;
+        }
+
+        .pricebox2 .para2 {
+            margin-left: 14px;
+            font-size: 17px;
+            margin-top: 9px;
+        }
+
+        .pricebox2 ul {
+            list-style: lower-latin;
+        }
+
+        .pricebox2 ul li {
+            color: rgba(255, 255, 255, 0.383);
+            margin-left: 32px;
+            margin-top: 10px;
+        }
+
+        .last {
+            margin-top: 10px;
+        }
+
+        .pricebox2 button {
+            width: 290px;
+
+            height: 42px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: none;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            font-size: 15px;
+            color: white;
+            /* margin-left: -10px; */
+            transition: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            position: relative;
+            top: 60px;
+            font-size: 17px;
+        }
+
+        .pricebox2 button:hover {
+            border: 2px solid rgb(81, 1, 99);
+        }
+
+        .pricebox1:hover {
+            box-shadow: -2px -3px 7px rgb(212, 2, 180);
+        }
+
+        .pricebox2:hover {
+            box-shadow: 2px -3px 7px rgb(212, 2, 180);
+        }
+
+        /* Footer */
+        .container4 {
+            width: 100vw;
+            height: 400px;
+            background-color: rgb(25, 24, 24);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 100px;
+            position: relative;
+            /* border: 1px solid green; */
+            position: relative;
+            margin: 0;
+            padding: 0;
+            /* top: 30px; */
+            /* margin-top: 30px; */
+
+        }
+
+        .container4 .items2,.items3,.items4 {
+            /* border: 1px solid red; */
+            /* background-color: black; */
+            margin-top: 40px;
+        }
+
+
+        .container4 .icons {
+            margin-top: -10px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .container4 .icons i {
+            font-size: 25px;
+            margin-left: 10px;
+            color: rgba(255, 255, 255, 0.629);
+            position: relative;
+            left: -70px;
+        }
+
+        .container4 .items1 {
+            position: relative;
+            left: -10px;
+            background-color: #141414;
+            /* border-radius: 25px; */
+            box-shadow: 2px 3px 6px black;
+            height: 100%;
+            /* top: 30px; */
+            width: 400px;
+            padding-left: 50px;
+        }
+
+        .container4 .items1:hover {
+            box-shadow: 2px 3px 6px rgb(212, 2, 180);
+        }
+
+        .container4 .items2,.items3,.items4 {
+            color: rgba(255, 255, 255, 0.604);
+            
+        }
+
+        .items2 p{
+            margin-top: 9px;
+        }
+        .items3 p{
+            margin-top: 9px;
+        }
+        .items4 p{
+            margin-top: 9px;
+        }
+        .items2 p:hover {
+            color: white;
+        }
+        .items3 p:hover {
+            color: white;
+        }
+        .items4 p:hover {
+            color: white;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="logo" class="logo">
+            <ul>
+                <li id="same">Pricing</li>
+                <li>Features</li>
+                <li id="same">Showcase</li>
+                <button class="btn1">Login</button>
+                <button class="btn2">Sign Up <i class="fa-solid fa-arrow-right"></i></button>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- section1 -->
+    <section>
+        <div class="container">
+            <div class="heading">
+                <h1 style="color: white;">Get your</h1>
+                <h1 class="gradient-text">AI Generated Website</h1>
+                <h1 style="color: white;">In Seconds</h1>
+            </div>
+            <div class="simple">
+                <span>Give it a try right below, without having to sign up!</span>
+            </div>
+
+            <!-- searching -->
+            <div class="search">
+                <div class="search2">
+                    <input type="text" id="searchInput" style="color: rgba(255, 255, 255, 0.638);">
+
+                    <button class="bt">Generate<i class="fa-solid fa-star-of-life"></i></button>
+                </div>
+            </div>
+            <div class="exe">
+                <span>Excellent</span> <i class="fa-solid fa-star" id="oneicon"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star-half"></i><span>4.5 out of 5 basis on 85 reviews!</span> <button
+                    class="bt1"><i class="fa-solid fa-star"></i><span>Trustpilot</span></button>
+                <h4>FEATURES</h4>
+            </div>
+    </section>
+    <!-- Section 2 -->
+
+    <div class="container2">
+
+        <h2>Generating your website is just the start.
+            With Umso you can go all the way. </h2>
+
+        <div class="secgrid">
+            <div class="box"><i class="fa-solid fa-chart-line"></i><span>Analysis</span>
+                <p>Monitor the performance of your startup and base decisions on data. Get website analytics with no
+                    extra setup.</p><button>Learn More</button>
+            </div>
+            <div class="box"><i class="fa-regular fa-share-from-square"></i><span>Custom Forms</span>
+                <p>Monitor the performance of your startup and base decisions on data. Get website analytics with no
+                    extra setup.</p><button>Learn More</button>
+            </div>
+            <div class="box"><i class="fa-regular fa-address-book"></i><span>User Management</span>
+                <p>Monitor the performance of your startup and base decisions on data. Get website analytics with no
+                    extra setup.</p><button>Learn More</button>
+            </div>
+            <div class="box"><i class="fa-solid fa-pen-clip"></i><span>Blogs</span>
+                <p>Monitor the performance of your startup and base decisions on data. Get website analytics with no
+                    extra setup.</p><button>Learn More</button>
+            </div>
+            <div class="box"><i class="fa-solid fa-cookie-bite"></i><span>cookie solution</span>
+                <p>Monitor the performance of your startup and base decisions on data. Get website analytics with no
+                    extra setup.</p><button>Learn More</button>
+            </div>
+            <div class="box"><i class="fa-solid fa-globe"></i><span>Multi Media</span>
+                <p>Monitor the performance of your startup and base decisions on data. Get website analytics with no
+                    extra setup.</p><button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="para"><span>"Umso is far away the easiest Landing page builder I've ever used.</span>
+            <p>It is very intuitive and you can set up a test for a new project in less than one hour without any
+                knowledge in coding. Even if it is <span id="se">simple, it is very robust and there all options
+                    needed."</span></p>
+            <span style="display: block; margin-top: 30px; font-weight: 200; position: relative; left: 350px;"
+                id="se">Ali Hassan</span>
+        </div>
+
+    </div>
+
+    <!-- section3 -->
+    <section>
+        <div class="container3">
+            <div class="head">
+                <h4>PRICING</h4>
+                <h2>One Price for Everything </h2>
+                <span>The simplest pricing in the industry. You won't need a calculator for this.</span>
+            </div>
+
+            <div class="pricebox1">
+                <h3>Pro</h3>
+                <div>Includes everything you need for your professional website</div>
+                <span class="in">$20</span><span class="tw"
+                    style="position: relative; top: 30px; margin-left: 10px; font-size: 15px;">/Site/Month (billed
+                    annually)</span>
+
+                <div class="first">
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                </div>
+                <div class="second">
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                    <div class="item"><i class="fas fa-check"></i> <span>Custom Domains</span></div>
+                </div>
+
+                <div class="bts"><button>Get Started <i class="fa-solid fa-arrow-right"></i></button></div>
+            </div>
+
+
+            <div class="pricebox2">
+                <span class="basic">Basic</span>
+                <span class="para1">Publish your site for free with almost all pro features.</span>
+                <span class="free">Free</span>
+                <span class="para2">Everything from Pro, except:</span>
+                <ul style="margin-top: 10px;">
+                    <li>No Custom Domains</li>
+                    <li>"Made with Umso" Branding</li>
+                </ul>
+                <span class="last" style="margin-top: 20px;">No credit card required</span>
+                <button>Get Started</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container4">
+            <div class="items1" style="display: flex; flex-direction: column; "><span
+                    style="color: rgba(255, 255, 255, 0.836); margin: 30px; ">&#169 2024 Umso
+                    Software Inc.</span><img src="logo.png" alt=""
+                    style="height: 30px; width: 150px; margin: 30px; margin-top: -20px;">
+                <div class="icons"><i class="fab fa-facebook"></i><i
+                        class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-linkedin-in"></i>
+                </div><span
+                    style="margin-top: 20px; margin-left: 55px; color: rgba(255, 255, 255, 0.644);">Cookie
+                    Settings</span>
+            </div>
+            <div class="items2" >
+                <h3 style="color:white; margin-bottom: 30px;">Services</h3>
+                <p>Web Design</p>
+                <p>SEO</p>
+                <p>Marketing</p>
+                <p>Consulting</p>
+                <p>Graphic Design</p>
+                <p>App Development</p>
+                <p>Content Writing</p>
+                <p>Social Media Management</p>
+            </div>
+            <div class="items3">
+                <h3 style="color:white; margin-bottom: 30px;">Support</h3>
+                <p>Contact Us</p>
+                <p>FAQ</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Service</p>
+                <p>Help Center</p>
+                <p>Community</p>
+                <p>Documentation</p>
+                <p>Troubleshooting</p>
+            </div>
+            <div class="items4">
+                <h3 style="color:white; margin-bottom: 30px;">Contact</h3>
+                <p>1234 Street Name, City, State, 12345</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Business Hours: Mon-Fri, 9am-5pm</p>
+                <p>Fax: (123) 456-7891</p>
+                <p>LinkedIn: @company</p>
+                <p>Twitter: @company</p>
+                <p>Facebook: /company</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<script>
+    var typed = new Typed('#searchInput', {
+        strings: ['I can build sites....', 'online coaching business....', 'Fitness developing app for students....', 'Online learning plateform....', 'Non Veg Resturant....', 'Programming learnings....', 'Soscial Science....'],
+        typeSpeed: 50,
+        startDelay: 500, // Delay before typing starts
+        showCursor: false, // Hide the typing cursor
+        loop: true, // Loop the typing animation
+        loopCount: Infinity, // Set to infinite loop
+        onStringTyped: function (arrayPos, self) {
+            // Update the input field's value
+            document.getElementById('searchInput').value = self.strings[arrayPos];
+        }
+    });
+</script>
+
+</html>
